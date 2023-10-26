@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine World</title>
+    <link rel="icon" href="/web.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url(/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            display: grid;
+            place-items: center;
+        }
+        .list {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 40px;
+        }
+        .link {
+          position: relative;
+          display: inline-block;
+          text-decoration: none;
+          color: #fff;
+          font-weight: 700;
+           
+        }
+        .link::before,
+        .link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #00fff2;
+            transform: scaleX(0);
+            transition: transform 0.25s;
+        }
+
+        .link::before {
+            top: -3px;
+            transform-origin: left;
+        }
+        .link::after {
+            bottom: -3px;
+            transform-origin: right;
+        }
+
+        .link:hover::before,
+        .link:hover::after,
+        .active::before,
+        .active::after {
+            transform: scaleX(1);
+        }
+        .header .list .link{
+            text-align: center;
+           display: flex;
+           bottom:  80px;
+        }
+        .header  li{
+            margin-left: 100px;
+        }
+        .content h1{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        
+        .content p{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 50px;
+            font-size: larger;
+
+        }
+        .content button{
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 100px;
+            }
+        .center  a{
+            padding: 10px;
+            text-decoration: none;
+        }
+        a:hover{
+            cursor: pointer;
+        }
+        .btn:hover{
+            cursor: pointer;
+              background-image:linear-gradient(#2b5876,#4e4376) ;
+              color: aliceblue;
+        }
+        .btn{
+            font-size: larger;
+            height: 50px;
+            width: 130px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="header">
+        <ul class="list">
+            <li><a href="/index.html" class="link">
+                Home</a></li>
+            <li><a href="" class="link  ">
+                Blogs</a></li>
+            <li><a href="#" class="link">
+                Services</a></li>
+            <li><a href="#" class="link ">
+                Contact</a></li>
+            <li><a href="#" class="link">
+                About</a></li>
+          </ul>
+        </div>
+          <div class="content">
+          <h1>Beauty of Marine World</h1>
+          <p>Beauty and mystery are hidden under the sea. Explore with our webpage to know about Aquatic Animals.<p>
+        <div>
+          
+      <div class="center">
+          <button class="btn" onclick="window.location.href='/visit.html'">Visit</button>
+          </div>
+        
+          <footer>
+            <p>&copy; 2023 My Simple webpage</p>
+          </footer>
+    </main>
+    </body>
+</html>
+              
